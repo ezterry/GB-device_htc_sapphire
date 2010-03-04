@@ -1,4 +1,5 @@
-# Copyright (C) 2008 The Android Open Source Project
+#
+# Copyright (C) 2008 Google Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,6 +12,11 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
+# To be included directly by a product makefile; do not use inherit-product.
 
-include $(call all-named-subdir-makefiles, boot libsensors recovery)
+PRODUCT_COPY_FILES += \
+	device/htc/sapphire/gps.conf_AS:system/etc/gps.conf
+
+$(call inherit-product, device/htc/sapphire/device_sapphire.mk)
