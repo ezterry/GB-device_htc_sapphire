@@ -17,6 +17,8 @@
 # Product-specific compile-time definitions.
 #
 
+-include vendor/htc/sapphire/BoardConfigVendor.mk
+
 TARGET_BOARD_PLATFORM := msm7k
 TARGET_CPU_ABI := armeabi
 
@@ -44,8 +46,6 @@ TARGET_BOOTLOADER_BOARD_NAME := sapphire
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 
 BOARD_HAVE_BLUETOOTH := true
-
-BOARD_GPS_LIBRARIES := libgps
 
 BOARD_VENDOR_USE_AKMD := akm8976
 
