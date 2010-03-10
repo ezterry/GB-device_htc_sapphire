@@ -14,12 +14,6 @@
 # limitations under the License.
 #
 
-# To be included directly by a device_sapphire*.mk makefile;
-# do not use inherit-product on this file.
-
-# stuff common to all HTC phones
-$(call inherit-product, device/htc/common/common.mk)
-
 PRODUCT_MANUFACTURER := HTC
 DEVICE_PACKAGE_OVERLAYS := device/htc/sapphire/overlay device/htc/common/overlay vendor/htc/common/overlay
 
@@ -35,13 +29,16 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/base/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml
 
-#include Windows Media
-include vendor/pv/wm/WindowsMedia.mk
-
-
 PRODUCT_PROPERTY_OVERRIDES +=
     ro.media.dec.jpeg.memcap=10000000
 
 # media configuration xml file
 PRODUCT_COPY_FILES += \
     device/htc/sapphire/media_profiles.xml:/system/etc/media_profiles.xml
+
+# proprietary side of sapphire
+$(call inherit-product-if-exists, vendor/htc/sapphire/device_sapphire-vendor.mk)
+
+# stuff common to all HTC phones
+$(call inherit-product, device/htc/common/common.mk)
+
