@@ -14,9 +14,8 @@
 # limitations under the License.
 #
 
-# To be included directly by a product makefile; do not use inherit-product.
-
-PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES := \
 	device/htc/sapphire/gps.conf_US:system/etc/gps.conf
 
+$(call inherit-product-if-exists, vendor/htc/sapphire/device_sapphire_us-vendor.mk)
 $(call inherit-product, device/htc/sapphire/device_sapphire.mk)

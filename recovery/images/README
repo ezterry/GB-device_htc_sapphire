@@ -1,6 +1,6 @@
 This directory contains the firmware_install.565 and
 firmware_error.565 bitmaps shown when installing a radio or hboot
-update via OTA on a sapphire device.
+update via OTA on this device.
 
 They were generated from the corresponding .png files by doing:
 

@@ -1,4 +1,4 @@
-# Copyright (C) 2009 The Android Open Source Project
+# Copyright (C) 2007 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -74,7 +74,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 # OpenGL drivers config file path
 BOARD_EGL_CFG := device/htc/sapphire/egl.cfg
 
-# No fallback font by default for Sapphire (space savings)
+# No fallback font by default (space savings)
 NO_FALLBACK_FONT:=true
 
 TARGET_RECOVERY_UI_LIB := librecovery_ui_sapphire librecovery_ui_htc

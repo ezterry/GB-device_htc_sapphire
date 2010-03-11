@@ -14,14 +14,10 @@
 # limitations under the License.
 #
 
-PRODUCT_MANUFACTURER := HTC
-DEVICE_PACKAGE_OVERLAYS := device/htc/sapphire/overlay device/htc/common/overlay vendor/htc/common/overlay
-
-# we have enough storage space to hold precise GC data
-#PRODUCT_TAGS += dalvik.gc.type-precise
+DEVICE_PACKAGE_OVERLAYS := device/htc/sapphire/overlay
 
 # Install the features available on this device.
-PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES := \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/base/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
     frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
@@ -29,14 +25,14 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/base/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_PROPERTY_OVERRIDES := \
     ro.media.dec.jpeg.memcap=10000000
 
 # media configuration xml file
 PRODUCT_COPY_FILES += \
     device/htc/sapphire/media_profiles.xml:/system/etc/media_profiles.xml
 
-# proprietary side of sapphire
+# proprietary side of the device
 $(call inherit-product-if-exists, vendor/htc/sapphire/device_sapphire-vendor.mk)
 
 # stuff common to all HTC phones
