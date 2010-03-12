@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-PRODUCT_COPY_FILES := \
-	device/htc/sapphire/gps.conf_US:system/etc/gps.conf
-
+$(call inherit-product, device/common/gps/gps_us_supl.mk)
 $(call inherit-product-if-exists, vendor/htc/sapphire/device_sapphire_us-vendor.mk)
 $(call inherit-product, device/htc/sapphire/device_sapphire.mk)
