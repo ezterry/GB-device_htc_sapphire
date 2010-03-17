@@ -39,7 +39,7 @@ WIFI_DRIVER_MODULE_NAME     := "wlan"
 WIFI_FIRMWARE_LOADER        := "wlan_loader"
 
 TARGET_BOOTLOADER_LIBS := \
-	libboot_board_sapphire \
+	libboot_board_dream_sapphire \
 	libboot_arch_msm7k \
 	libboot_arch_armv6
 
