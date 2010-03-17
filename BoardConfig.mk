@@ -24,37 +24,7 @@ USE_CAMERA_STUB := true
 
 -include vendor/htc/sapphire/BoardConfigVendor.mk
 
-TARGET_BOARD_PLATFORM := msm7k
-TARGET_CPU_ABI := armeabi
-
-TARGET_NO_BOOTLOADER := true
-
-# Wifi related defines
-BOARD_WPA_SUPPLICANT_DRIVER := CUSTOM
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := libWifiApi
-BOARD_WLAN_TI_STA_DK_ROOT   := system/wlan/ti/sta_dk_4_0_4_32
-WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/wlan.ko"
-WIFI_DRIVER_MODULE_ARG      := ""
-WIFI_DRIVER_MODULE_NAME     := "wlan"
-WIFI_FIRMWARE_LOADER        := "wlan_loader"
-
-TARGET_BOOTLOADER_LIBS := \
-	libboot_board_dream_sapphire \
-	libboot_arch_msm7k \
-	libboot_arch_armv6
-
-TARGET_BOOTLOADER_LINK_SCRIPT := \
-	hardware/msm7k/boot/boot.ld
-
 TARGET_BOOTLOADER_BOARD_NAME := sapphire
-
-BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
-
-BOARD_HAVE_BLUETOOTH := true
-
-BOARD_VENDOR_USE_AKMD := akm8976
-
-BOARD_VENDOR_QCOM_AMSS_VERSION := 6220
 
 # # cat /proc/mtd
 # dev:    size   erasesize  name
@@ -68,17 +38,7 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00280000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00500000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x05a00000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x127c0000
-# The size of a block that can be marked bad.
-BOARD_FLASH_BLOCK_SIZE := 131072
-
-# OpenGL drivers config file path
-BOARD_EGL_CFG := device/htc/sapphire/egl.cfg
-
-# No fallback font by default (space savings)
-NO_FALLBACK_FONT:=true
 
 TARGET_RECOVERY_UI_LIB := librecovery_ui_sapphire librecovery_ui_htc
 
-TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_htc
-
-TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
+include device/htc/dream-sapphire/BoardConfigCommon.mk
