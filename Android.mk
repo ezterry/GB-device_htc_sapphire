@@ -13,4 +13,4 @@
 # limitations under the License.
 
 
-include $(call all-named-subdir-makefiles, boot recovery)
+include $(call all-named-subdir-makefiles, recovery)
