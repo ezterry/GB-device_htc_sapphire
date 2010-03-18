@@ -16,6 +16,9 @@
 
 DEVICE_PACKAGE_OVERLAYS := device/htc/sapphire/overlay
 
+PRODUCT_PACKAGES := \
+    sensors.sapphire
+
 # proprietary side of the device
 $(call inherit-product-if-exists, vendor/htc/sapphire/device_sapphire-vendor.mk)
 
