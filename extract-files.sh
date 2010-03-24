@@ -14,33 +14,35 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-mkdir -p ../../../vendor/htc/sapphire/proprietary
-adb pull /system/bin/akmd ../../../vendor/htc/sapphire/proprietary/akmd
-chmod 755 ../../../vendor/htc/sapphire/proprietary/akmd
-adb pull /system/etc/01_qcomm_omx.cfg ../../../vendor/htc/sapphire/proprietary/01_qcomm_omx.cfg
-adb pull /system/etc/AudioFilter.csv ../../../vendor/htc/sapphire/proprietary/AudioFilter.csv
-adb pull /system/etc/AudioPara4.csv ../../../vendor/htc/sapphire/proprietary/AudioPara4.csv
-adb pull /system/etc/AudioPreProcess.csv ../../../vendor/htc/sapphire/proprietary/AudioPreProcess.csv
-adb pull /system/etc/firmware/brf6300.bin ../../../vendor/htc/sapphire/proprietary/brf6300.bin
-adb pull /system/etc/wifi/Fw1251r1c.bin ../../../vendor/htc/sapphire/proprietary/Fw1251r1c.bin
-adb pull /system/lib/egl/libGLES_qcom.so ../../../vendor/htc/sapphire/proprietary/libGLES_qcom.so
-adb pull /system/lib/libaudioeq.so ../../../vendor/htc/sapphire/proprietary/libaudioeq.so
-adb pull /system/lib/libcamera.so ../../../vendor/htc/sapphire/proprietary/libcamera.so
-adb pull /system/lib/libgps.so ../../../vendor/htc/sapphire/proprietary/libgps.so
-adb pull /system/lib/libhtc_acoustic.so ../../../vendor/htc/sapphire/proprietary/libhtc_acoustic.so
-adb pull /system/lib/libhtc_ril.so ../../../vendor/htc/sapphire/proprietary/libhtc_ril.so
-adb pull /system/lib/liblvmxipc.so ../../../vendor/htc/sapphire/proprietary/liblvmxipc.so
-adb pull /system/lib/libmm-adspsvc.so ../../../vendor/htc/sapphire/proprietary/libmm-adspsvc.so
-adb pull /system/lib/liboemcamera.so ../../../vendor/htc/sapphire/proprietary/liboemcamera.so
-adb pull /system/lib/libOmxCore.so ../../../vendor/htc/sapphire/proprietary/libOmxCore.so
-adb pull /system/lib/libOmxH264Dec.so ../../../vendor/htc/sapphire/proprietary/libOmxH264Dec.so
-adb pull /system/lib/libOmxMpeg4Dec.so ../../../vendor/htc/sapphire/proprietary/libOmxMpeg4Dec.so
-adb pull /system/lib/libOmxVidEnc.so ../../../vendor/htc/sapphire/proprietary/libOmxVidEnc.so
-adb pull /system/lib/libopencorehw.so ../../../vendor/htc/sapphire/proprietary/libopencorehw.so
-adb pull /system/lib/libqcomm_omx.so ../../../vendor/htc/sapphire/proprietary/libqcomm_omx.so
-adb pull /system/lib/libstagefrighthw.so ../../../vendor/htc/sapphire/proprietary/libstagefrighthw.so
+DEVICE=sapphire
 
-cat > ../../../vendor/htc/sapphire/device_sapphire-vendor.mk << EOF
+mkdir -p ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/bin/akmd ../../../vendor/htc/$DEVICE/proprietary/akmd
+chmod 755 ../../../vendor/htc/$DEVICE/proprietary/akmd
+adb pull /system/etc/01_qcomm_omx.cfg ../../../vendor/htc/$DEVICE/proprietary/01_qcomm_omx.cfg
+adb pull /system/etc/AudioFilter.csv ../../../vendor/htc/$DEVICE/proprietary/AudioFilter.csv
+adb pull /system/etc/AudioPara4.csv ../../../vendor/htc/$DEVICE/proprietary/AudioPara4.csv
+adb pull /system/etc/AudioPreProcess.csv ../../../vendor/htc/$DEVICE/proprietary/AudioPreProcess.csv
+adb pull /system/etc/firmware/brf6300.bin ../../../vendor/htc/$DEVICE/proprietary/brf6300.bin
+adb pull /system/etc/wifi/Fw1251r1c.bin ../../../vendor/htc/$DEVICE/proprietary/Fw1251r1c.bin
+adb pull /system/lib/egl/libGLES_qcom.so ../../../vendor/htc/$DEVICE/proprietary/libGLES_qcom.so
+adb pull /system/lib/libaudioeq.so ../../../vendor/htc/$DEVICE/proprietary/libaudioeq.so
+adb pull /system/lib/libcamera.so ../../../vendor/htc/$DEVICE/proprietary/libcamera.so
+adb pull /system/lib/libgps.so ../../../vendor/htc/$DEVICE/proprietary/libgps.so
+adb pull /system/lib/libhtc_acoustic.so ../../../vendor/htc/$DEVICE/proprietary/libhtc_acoustic.so
+adb pull /system/lib/libhtc_ril.so ../../../vendor/htc/$DEVICE/proprietary/libhtc_ril.so
+adb pull /system/lib/liblvmxipc.so ../../../vendor/htc/$DEVICE/proprietary/liblvmxipc.so
+adb pull /system/lib/libmm-adspsvc.so ../../../vendor/htc/$DEVICE/proprietary/libmm-adspsvc.so
+adb pull /system/lib/liboemcamera.so ../../../vendor/htc/$DEVICE/proprietary/liboemcamera.so
+adb pull /system/lib/libOmxCore.so ../../../vendor/htc/$DEVICE/proprietary/libOmxCore.so
+adb pull /system/lib/libOmxH264Dec.so ../../../vendor/htc/$DEVICE/proprietary/libOmxH264Dec.so
+adb pull /system/lib/libOmxMpeg4Dec.so ../../../vendor/htc/$DEVICE/proprietary/libOmxMpeg4Dec.so
+adb pull /system/lib/libOmxVidEnc.so ../../../vendor/htc/$DEVICE/proprietary/libOmxVidEnc.so
+adb pull /system/lib/libopencorehw.so ../../../vendor/htc/$DEVICE/proprietary/libopencorehw.so
+adb pull /system/lib/libqcomm_omx.so ../../../vendor/htc/$DEVICE/proprietary/libqcomm_omx.so
+adb pull /system/lib/libstagefrighthw.so ../../../vendor/htc/$DEVICE/proprietary/libstagefrighthw.so
+
+(cat << EOF) | sed s/DEVICE/$DEVICE/g > ../../../vendor/htc/$DEVICE/device_$DEVICE-vendor.mk
 # Copyright (C) 2010 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -55,39 +57,39 @@ cat > ../../../vendor/htc/sapphire/device_sapphire-vendor.mk << EOF
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# This file is generated by device/htc/sapphire/extract-files.sh
+# This file is generated by device/htc/DEVICE/extract-files.sh
 
 PRODUCT_COPY_FILES := \\
-    vendor/htc/sapphire/proprietary/libgps.so:obj/lib/libgps.so \\
-    vendor/htc/sapphire/proprietary/libcamera.so:obj/lib/libcamera.so
+    vendor/htc/DEVICE/proprietary/libgps.so:obj/lib/libgps.so \\
+    vendor/htc/DEVICE/proprietary/libcamera.so:obj/lib/libcamera.so
 
 PRODUCT_COPY_FILES += \\
-    vendor/htc/sapphire/proprietary/akmd:system/bin/akmd \\
-    vendor/htc/sapphire/proprietary/01_qcomm_omx.cfg:system/etc/01_qcomm_omx.cfg \\
-    vendor/htc/sapphire/proprietary/AudioFilter.csv:system/etc/AudioFilter.csv \\
-    vendor/htc/sapphire/proprietary/AudioPara4.csv:system/etc/AudioPara4.csv \\
-    vendor/htc/sapphire/proprietary/AudioPreProcess.csv:system/etc/AudioPreProcess.csv \\
-    vendor/htc/sapphire/proprietary/brf6300.bin:system/etc/firmware/brf6300.bin \\
-    vendor/htc/sapphire/proprietary/Fw1251r1c.bin:system/etc/wifi/Fw1251r1c.bin \\
-    vendor/htc/sapphire/proprietary/libGLES_qcom.so:system/lib/egl/libGLES_qcom.so \\
-    vendor/htc/sapphire/proprietary/libaudioeq.so:system/lib/libaudioeq.so \\
-    vendor/htc/sapphire/proprietary/libcamera.so:system/lib/libcamera.so \\
-    vendor/htc/sapphire/proprietary/libgps.so:system/lib/libgps.so \\
-    vendor/htc/sapphire/proprietary/libhtc_acoustic.so:system/lib/libhtc_acoustic.so \\
-    vendor/htc/sapphire/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so \\
-    vendor/htc/sapphire/proprietary/liblvmxipc.so:system/lib/liblvmxipc.so \\
-    vendor/htc/sapphire/proprietary/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \\
-    vendor/htc/sapphire/proprietary/liboemcamera.so:system/lib/liboemcamera.so \\
-    vendor/htc/sapphire/proprietary/libOmxCore.so:system/lib/libOmxCore.so \\
-    vendor/htc/sapphire/proprietary/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \\
-    vendor/htc/sapphire/proprietary/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \\
-    vendor/htc/sapphire/proprietary/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
-    vendor/htc/sapphire/proprietary/libopencorehw.so:system/lib/libopencorehw.so \\
-    vendor/htc/sapphire/proprietary/libqcomm_omx.so:system/lib/libqcomm_omx.so \\
-    vendor/htc/sapphire/proprietary/libstagefrighthw.so:system/lib/libstagefrighthw.so
+    vendor/htc/DEVICE/proprietary/akmd:system/bin/akmd \\
+    vendor/htc/DEVICE/proprietary/01_qcomm_omx.cfg:system/etc/01_qcomm_omx.cfg \\
+    vendor/htc/DEVICE/proprietary/AudioFilter.csv:system/etc/AudioFilter.csv \\
+    vendor/htc/DEVICE/proprietary/AudioPara4.csv:system/etc/AudioPara4.csv \\
+    vendor/htc/DEVICE/proprietary/AudioPreProcess.csv:system/etc/AudioPreProcess.csv \\
+    vendor/htc/DEVICE/proprietary/brf6300.bin:system/etc/firmware/brf6300.bin \\
+    vendor/htc/DEVICE/proprietary/Fw1251r1c.bin:system/etc/wifi/Fw1251r1c.bin \\
+    vendor/htc/DEVICE/proprietary/libGLES_qcom.so:system/lib/egl/libGLES_qcom.so \\
+    vendor/htc/DEVICE/proprietary/libaudioeq.so:system/lib/libaudioeq.so \\
+    vendor/htc/DEVICE/proprietary/libcamera.so:system/lib/libcamera.so \\
+    vendor/htc/DEVICE/proprietary/libgps.so:system/lib/libgps.so \\
+    vendor/htc/DEVICE/proprietary/libhtc_acoustic.so:system/lib/libhtc_acoustic.so \\
+    vendor/htc/DEVICE/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so \\
+    vendor/htc/DEVICE/proprietary/liblvmxipc.so:system/lib/liblvmxipc.so \\
+    vendor/htc/DEVICE/proprietary/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \\
+    vendor/htc/DEVICE/proprietary/liboemcamera.so:system/lib/liboemcamera.so \\
+    vendor/htc/DEVICE/proprietary/libOmxCore.so:system/lib/libOmxCore.so \\
+    vendor/htc/DEVICE/proprietary/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \\
+    vendor/htc/DEVICE/proprietary/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \\
+    vendor/htc/DEVICE/proprietary/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
+    vendor/htc/DEVICE/proprietary/libopencorehw.so:system/lib/libopencorehw.so \\
+    vendor/htc/DEVICE/proprietary/libqcomm_omx.so:system/lib/libqcomm_omx.so \\
+    vendor/htc/DEVICE/proprietary/libstagefrighthw.so:system/lib/libstagefrighthw.so
 EOF
 
-cat > ../../../vendor/htc/sapphire/BoardConfigVendor.mk << EOF
+(cat << EOF) | sed s/DEVICE/$DEVICE/g > ../../../vendor/htc/$DEVICE/BoardConfigVendor.mk
 # Copyright (C) 2010 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -102,7 +104,7 @@ cat > ../../../vendor/htc/sapphire/BoardConfigVendor.mk << EOF
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# This file is generated by device/htc/sapphire/extract-files.sh
+# This file is generated by device/htc/DEVICE/extract-files.sh
 
 BOARD_GPS_LIBRARIES := libgps
 
