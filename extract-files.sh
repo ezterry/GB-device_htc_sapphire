@@ -19,6 +19,7 @@ adb pull /system/bin/akmd ../../../vendor/htc/sapphire/proprietary/akmd
 chmod 755 ../../../vendor/htc/sapphire/proprietary/akmd
 adb pull /system/etc/01_qcomm_omx.cfg ../../../vendor/htc/sapphire/proprietary/01_qcomm_omx.cfg
 adb pull /system/etc/AudioFilter.csv ../../../vendor/htc/sapphire/proprietary/AudioFilter.csv
+adb pull /system/etc/AudioPara4.csv ../../../vendor/htc/sapphire/proprietary/AudioPara4.csv
 adb pull /system/etc/AudioPreProcess.csv ../../../vendor/htc/sapphire/proprietary/AudioPreProcess.csv
 adb pull /system/etc/firmware/brf6300.bin ../../../vendor/htc/sapphire/proprietary/brf6300.bin
 adb pull /system/etc/pvasflocal.cfg ../../../vendor/htc/sapphire/proprietary/pvasflocal.cfg
@@ -70,6 +71,7 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/sapphire/proprietary/akmd:system/bin/akmd \\
     vendor/htc/sapphire/proprietary/01_qcomm_omx.cfg:system/etc/01_qcomm_omx.cfg \\
     vendor/htc/sapphire/proprietary/AudioFilter.csv:system/etc/AudioFilter.csv \\
+    vendor/htc/sapphire/proprietary/AudioPara4.csv:system/etc/AudioPara4.csv \\
     vendor/htc/sapphire/proprietary/AudioPreProcess.csv:system/etc/AudioPreProcess.csv \\
     vendor/htc/sapphire/proprietary/brf6300.bin:system/etc/firmware/brf6300.bin \\
     vendor/htc/sapphire/proprietary/pvasflocal.cfg:system/etc/pvasflocal.cfg \\
