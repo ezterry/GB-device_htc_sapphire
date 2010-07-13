@@ -26,6 +26,8 @@ USE_CAMERA_STUB := true
 
 TARGET_BOOTLOADER_BOARD_NAME := sapphire
 
+BOARD_KERNEL_BASE := 0x02000000
+
 # # cat /proc/mtd
 # dev:    size   erasesize  name
 # mtd0: 00040000 00020000 "misc"
