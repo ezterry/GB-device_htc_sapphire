@@ -52,6 +52,9 @@ on boot
     write /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate 40000
     write /sys/devices/system/cpu/cpufreq/ondemand/up_threshold 85
 
+    # enable insecure AGPS
+    setprop ro.ril.def.agps.mode 2
+
 # compass/accelerometer daemon
 service akmd /system/bin/akmd
     user compass
