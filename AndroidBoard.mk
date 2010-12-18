@@ -27,6 +27,7 @@ $(file) : $(LOCAL_PATH)/init.sapphire.rc | $(ACP)
 	$(transform-prebuilt-to-target)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE_TAGS := debug optional
 LOCAL_SRC_FILES := sapphire-keypad.kcm
 include $(BUILD_KEY_CHAR_MAP)
 
