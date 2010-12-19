@@ -1,2 +1,1 @@
-require board=sapphire|trout
 require version-bootloader=1.33.0011|1.33.2011|1.33.3011|1.33.0013|1.33.2013|1.33.3013|1.33.0013d
