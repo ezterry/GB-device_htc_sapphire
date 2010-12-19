@@ -18,9 +18,6 @@
 # defined in envsetup.sh.
 #
 
-#copy in updated busybox make script
-cp device/htc/dream-sapphire/busybox_build external/busybox/Android.mk
-
 # In particular, you can add lunch options with the add_lunch_combo
 # function: add_lunch_combo generic-eng
 
