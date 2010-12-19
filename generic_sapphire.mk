@@ -23,6 +23,18 @@
 $(call inherit-product, device/htc/sapphire/device_sapphire_us.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic.mk)
 
+#add in dream keypad
+TROUT_KEYMAPDIR=device/htc/sapphire/keymaps/
+PRODUCT_COPY_FILES += \
+    $(TROUT_KEYMAPDIR)trout-keypad.kcm.bin:/system/usr/keychars/trout-keypad.kcm.bin  \
+    $(TROUT_KEYMAPDIR)trout-keypad-v3.kcm.bin:/system/usr/keychars/trout-keypad-v3.kcm.bin  \
+    $(TROUT_KEYMAPDIR)trout-keypad-v2.kcm.bin:/system/usr/keychars/trout-keypad-v2.kcm.bin  \
+    $(TROUT_KEYMAPDIR)trout-keypad-qwertz.kcm.bin:/system/usr/keychars/trout-keypad-qwertz.kcm.bin  \
+    $(TROUT_KEYMAPDIR)trout-keypad.kl:/system/usr/keylayout/trout-keypad.kl  \
+    $(TROUT_KEYMAPDIR)trout-keypad-v3.kl:/system/usr/keylayout/trout-keypad-v3.kl  \
+    $(TROUT_KEYMAPDIR)trout-keypad-v2.kl:/system/usr/keylayout/trout-keypad-v2.kl  \
+    $(TROUT_KEYMAPDIR)trout-keypad-qwertz.kl:/system/usr/keylayout/trout-keypad-qwertz.kl  \
+
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := dream_sapphire
 PRODUCT_DEVICE := sapphire
