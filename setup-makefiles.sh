@@ -58,4 +58,6 @@ EOF
 BOARD_GPS_LIBRARIES := libgps
 
 USE_CAMERA_STUB := false
+
+TARGET_NO_RECOVERY := true
 EOF
