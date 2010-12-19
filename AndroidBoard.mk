@@ -14,8 +14,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-$(call add-radio-file,recovery/images/firmware_install.565)
-
 file := $(TARGET_OUT_KEYLAYOUT)/sapphire-keypad.kl
 ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/sapphire-keypad.kl | $(ACP)
@@ -25,6 +23,11 @@ file := $(TARGET_ROOT_OUT)/init.sapphire.rc
 ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/init.sapphire.rc | $(ACP)
 	$(transform-prebuilt-to-target)
+
+file := $(TARGET_ROOT_OUT)/init.trout.rc
+ALL_PREBUILT += $(file)
+$(file) : $(LOCAL_PATH)/init.trout.rc | $(ACP)
+    $(transform-prebuilt-to-target)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := debug optional
