@@ -43,4 +43,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x127c0000
 
 #TARGET_RECOVERY_UI_LIB := librecovery_ui_sapphire librecovery_ui_htc
 
+#we are rooted builds security off
+OVERRIDE_FORCE_SECURE_OFF := true
+
 include device/htc/dream-sapphire/BoardConfigCommon.mk
