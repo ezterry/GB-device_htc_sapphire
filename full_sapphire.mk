@@ -27,4 +27,4 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_sapphire
 PRODUCT_DEVICE := sapphire
-PRODUCT_MODEL := Full Android on Sapphire
+PRODUCT_MODEL := Gingerbread on Sapphire

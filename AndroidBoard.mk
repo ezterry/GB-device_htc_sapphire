@@ -19,15 +19,15 @@ ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/sapphire-keypad.kl | $(ACP)
 	$(transform-prebuilt-to-target)
 
+file := $(TARGET_ROOT_OUT)/init.trout.rc
+ALL_PREBUILT += $(file)
+$(file) : $(LOCAL_PATH)/init.trout.rc | $(ACP)
+	$(transform-prebuilt-to-target)
+
 file := $(TARGET_ROOT_OUT)/init.sapphire.rc
 ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/init.sapphire.rc | $(ACP)
 	$(transform-prebuilt-to-target)
-
-file := $(TARGET_ROOT_OUT)/init.trout.rc
-ALL_PREBUILT += $(file)
-$(file) : $(LOCAL_PATH)/init.trout.rc | $(ACP)
-    $(transform-prebuilt-to-target)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := debug optional

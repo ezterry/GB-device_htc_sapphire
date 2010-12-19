@@ -24,5 +24,5 @@ $(call inherit-product, device/htc/sapphire/device_sapphire_us.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := generic_sapphire
+PRODUCT_NAME := dream_sapphire
 PRODUCT_DEVICE := sapphire
