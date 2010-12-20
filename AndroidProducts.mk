@@ -25,6 +25,12 @@
 # it includes.
 #
 
+#optimize C code
+TARGET_arm_CFLAGS += -ffast-math
+
+#disable Jit on by default
+#WITH_JIT := false
+
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/generic_sapphire.mk \
     $(LOCAL_DIR)/full_sapphire.mk
