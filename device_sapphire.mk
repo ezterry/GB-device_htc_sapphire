@@ -19,6 +19,13 @@ DEVICE_PACKAGE_OVERLAYS := device/htc/sapphire/overlay
 PRODUCT_PACKAGES := \
     sensors.sapphire sensors.trout
 
+# libs and tools
+PRODUCT_PACKAGES += \
+    libGLES_android \
+    rsg-generator \
+    libRS \
+    librs_jni
+
 #add in dream keypad
 TROUT_KEYMAPDIR := device/htc/sapphire/keymaps/
 PRODUCT_COPY_FILES += \
