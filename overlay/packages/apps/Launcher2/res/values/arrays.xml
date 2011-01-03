@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="extra_wallpapers">
+        <item>wallpaper_fall_stream</item>
+    </string-array>
+</resources>
