@@ -21,7 +21,6 @@ adb pull /system/bin/akmd ../../../vendor/htc/$DEVICE/proprietary/akmd
 chmod 755 ../../../vendor/htc/$DEVICE/proprietary/akmd
 adb pull /system/etc/01_qcomm_omx.cfg ../../../vendor/htc/$DEVICE/proprietary/01_qcomm_omx.cfg
 adb pull /system/etc/AudioFilter.csv ../../../vendor/htc/$DEVICE/proprietary/AudioFilter.csv
-adb pull /system/etc/AudioPara4.csv ../../../vendor/htc/$DEVICE/proprietary/AudioPara4.csv
 adb pull /system/etc/AudioPreProcess.csv ../../../vendor/htc/$DEVICE/proprietary/AudioPreProcess.csv
 adb pull /system/etc/firmware/brf6300.bin ../../../vendor/htc/$DEVICE/proprietary/brf6300.bin
 adb pull /system/etc/wifi/Fw1251r1c.bin ../../../vendor/htc/$DEVICE/proprietary/Fw1251r1c.bin
@@ -64,7 +63,6 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/akmd:system/bin/akmd \\
     vendor/htc/__DEVICE__/proprietary/01_qcomm_omx.cfg:system/etc/01_qcomm_omx.cfg \\
     vendor/htc/__DEVICE__/proprietary/AudioFilter.csv:system/etc/AudioFilter.csv \\
-    vendor/htc/__DEVICE__/proprietary/AudioPara4.csv:system/etc/AudioPara4.csv \\
     vendor/htc/__DEVICE__/proprietary/AudioPreProcess.csv:system/etc/AudioPreProcess.csv \\
     vendor/htc/__DEVICE__/proprietary/brf6300.bin:system/etc/firmware/brf6300.bin \\
     vendor/htc/__DEVICE__/proprietary/Fw1251r1c.bin:system/etc/wifi/Fw1251r1c.bin \\
