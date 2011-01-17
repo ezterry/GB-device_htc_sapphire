@@ -17,7 +17,8 @@
 DEVICE_PACKAGE_OVERLAYS := device/htc/sapphire/overlay
 
 PRODUCT_PACKAGES := \
-    sensors.sapphire sensors.trout
+    sensors.sapphire sensors.trout \
+    gps.sapphire     gps.trout
 
 # libs and tools
 PRODUCT_PACKAGES += \
