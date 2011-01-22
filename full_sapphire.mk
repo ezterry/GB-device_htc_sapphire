@@ -26,10 +26,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
 
 #Include JA
 PRODUCT_LOCALES += ja_JP
-INCLUDE_FONT_DROIDSANSJAPANESE := true
 
 #Additional Translations
 PRODUCT_LOCALES += es_US ko_KR pt_PT ru_RU zh_TW zh_CN
+
+#pack fonts
+TARGET_SQUASH_FONTS:=true
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_sapphire
