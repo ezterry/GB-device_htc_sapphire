@@ -28,12 +28,14 @@ PRODUCT_PACKAGES += \
     librs_jni \
     libOmxCore \
     su \
-    vold.fstab
+    vold.fstab \
+    android.software.live_wallpaper.xml
 
 #APKs
 PRODUCT_PACKAGES += \
    SpareParts \
-   Superuser
+   Superuser \
+   LiveWallpapersPicker
 
 #add in dream keypad
 TROUT_KEYMAPDIR := device/htc/sapphire/keymaps/
