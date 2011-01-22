@@ -27,11 +27,13 @@ PRODUCT_PACKAGES += \
     libRS \
     librs_jni \
     libOmxCore \
+    su \
     vold.fstab
 
 #APKs
 PRODUCT_PACKAGES += \
-   SpareParts 
+   SpareParts \
+   Superuser
 
 #add in dream keypad
 TROUT_KEYMAPDIR := device/htc/sapphire/keymaps/
