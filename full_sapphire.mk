@@ -28,7 +28,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
 PRODUCT_LOCALES += ja_JP
 
 #Additional Translations
-PRODUCT_LOCALES += es_US ko_KR pt_PT ru_RU zh_TW zh_CN
+PRODUCT_LOCALES += es_US ko_KR pl_PL pt_PT ru_RU zh_TW zh_CN
 
 #pack fonts
 TARGET_SQUASH_FONTS:=true
