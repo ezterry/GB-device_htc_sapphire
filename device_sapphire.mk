@@ -29,6 +29,7 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     su \
     vold.fstab \
+    e2fsck \
     android.software.live_wallpaper.xml
 
 #APKs
