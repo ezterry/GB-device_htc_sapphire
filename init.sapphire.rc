@@ -13,8 +13,6 @@
 # limitations under the License.
 
 on early-init
-    device mtd@misc 0460 radio diag
-
 # Set timeout value for rmnet stats.
     write /sys/devices/virtual/net/rmnet0/timeout_suspend 5000000
     write /sys/devices/virtual/net/rmnet0/timeout 18000000
