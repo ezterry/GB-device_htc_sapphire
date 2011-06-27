@@ -30,6 +30,14 @@ PRODUCT_LOCALES += ja_JP
 #Additional Translations
 PRODUCT_LOCALES += es_US ko_KR pl_PL pt_PT ru_RU zh_TW zh_CN
 
+ifeq ($(EZGB_ALT_LANGPACK1),true)
+#alternative language pack 1 enabled
+PRODUCT_LOCALES := bg_BG cs_CZ da_DK el_GR fi_FI hu_HU nl_NL sk_SK
+PRODUCT_LOCALES += sr_RS sv_SE tl_PH tr_TR uk_UA en_US
+PRODUCT_DEFAULT_LANGUAGE := nl
+PRODUCT_DEFAULT_REGION := NL
+endif
+
 #pack fonts
 TARGET_SQUASH_FONTS:=true
 
