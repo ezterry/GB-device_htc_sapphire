@@ -30,6 +30,7 @@ PRODUCT_PACKAGES += \
     su \
     vold.fstab \
     e2fsck \
+    com.android.future.usb.accessory \
     android.software.live_wallpaper.xml
 
 #APKs
