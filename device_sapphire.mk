@@ -35,7 +35,7 @@ PRODUCT_PACKAGES += \
 
 #APKs
 PRODUCT_PACKAGES += \
-   SpareParts \
+   EzGbExtras \
    Superuser \
    LiveWallpapersPicker \
    FileManager
