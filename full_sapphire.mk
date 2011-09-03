@@ -28,7 +28,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
 PRODUCT_LOCALES += ja_JP
 
 #Additional Translations
-PRODUCT_LOCALES += es_US ko_KR pl_PL pt_PT ru_RU zh_TW zh_CN
+PRODUCT_LOCALES += es_US ko_KR pl_PL pt_PT pt_BR ru_RU zh_TW zh_CN
 
 ifeq ($(EZGB_ALT_LANGPACK1),true)
 #alternative language pack 1 enabled
