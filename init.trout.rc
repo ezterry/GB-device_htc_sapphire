@@ -95,3 +95,15 @@ service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport
     disabled
     oneshot
     keycodes 158 139
+
+# KSM kernel settings update
+# Controled by persist.sys.ksmenable
+service update_ksm /system/xbin/update_ksm
+    disabled
+    oneshot
+
+on property:persist.sys.ksmenable=1
+    start update_ksm
+
+on property:persist.sys.ksmenable=0
+    start update_ksm
